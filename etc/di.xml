@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="funami_getarray_get_array" xsi:type="object">Funami\Getarray\Console\Command\GetArray</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Funami\Getarray\Console\Command\GetArray">
+        <arguments>
+            <argument name="bankTransferPaymentNetworks" xsi:type="array">
+                <item name="sofort" xsi:type="string">sofort</item>
+                <item name="przelewy24" xsi:type="string">przelewy24</item>
+                <item name="ideal" xsi:type="string">ideal</item>
+                <item name="giropay" xsi:type="string">giropay</item>
+                <item name="eps" xsi:type="string">eps</item>
+                <item name="poli" xsi:type="string">poli</item>
+                <item name="dragonpay" xsi:type="string">dragonpay</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
